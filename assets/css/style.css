@@ -1,0 +1,10 @@
+.char-btn {
+	padding: 5px;
+}
+
+.char-btn img {
+	height: 130px;
+	width: 150px;
+	margin: auto;
+	display: block;
+}
