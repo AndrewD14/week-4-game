@@ -1,8 +1,5 @@
 //game global variables
 var charactersInPlay = [];
-var chosenCharacter = false;
-
-
 
 //function to populate the character buttons into html
 function loadCharacter(){
@@ -42,6 +39,8 @@ function loadCharacter(){
 	$("#defender button").remove();
 	$("#main-character button").remove();
 	$("#combat-log").empty();
+
+	charactersInPlay = [];
 }
 
 //gets the selected character ready
@@ -70,7 +69,7 @@ function selectCharacter(){
 		}
 		//adds the enemies to the defender section
 		else {
-			$(this).css('background-color', "blue");
+			$(this).css('background-color', "red");
 			var temp = $(this).detach();
 			$("#defender").append(temp);
 
@@ -119,6 +118,7 @@ function attacking(){
 			if($("#enemies").children().length == 1){
 				log = $("<h2>");
 				log.html("You WIN!!!");
+				log.attr("id", "win");
 				$("#combat-log").append(log);
 				
 				//shows the play again button
@@ -149,6 +149,12 @@ function attacking(){
 
 				//shows the play again button
 				$("#play-again").show();
+
+				//adds to log you lose
+				log = $("<h2>");
+				log.html("You lose.");
+				log.attr("id", "lose");
+				$("#combat-log").append(log);
 			}
 		}
 	}//checks for the characterInPlay size for 2

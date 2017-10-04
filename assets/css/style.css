@@ -1,5 +1,21 @@
+body {
+	background: url("../images/star-wars-background-death-star.jpg");
+	color: white;
+	padding: 10px;
+	font-family: 'Poller One', cursive;
+}
+
+#title {
+	text-align: center;
+}
+
+button {
+	color: black;
+}
+
 .char-btn p {
 	margin: 0;
+	color: black;
 }
 
 .char-btn img {
@@ -7,4 +23,24 @@
 	width: 120px;
 	margin: auto;
 	display: block;
+}
+
+#attack {
+	font-weight: bold;
+}
+
+.opacity-box {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+	font-weight: bold;
+}
+
+#win {
+	color: green;
+}
+
+#lose {
+	color: red;
 }

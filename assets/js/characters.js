@@ -1,7 +1,6 @@
 var characterOptions = [
 	{
 		name: "Luke Skywalker",
-		id: "luke",
 		hp: 120,
 		attackPower: 7,
 		counterAttackPower: 12,
@@ -10,7 +9,6 @@ var characterOptions = [
 
 	{
 		name: "Darth Maul",
-		id: "maul",
 		hp: 100,
 		attackPower: 10,
 		counterAttackPower: 10,
@@ -19,10 +17,17 @@ var characterOptions = [
 
 	{
 		name: "Darth Vader",
-		id: "vader",
 		hp: 200,
 		attackPower: 9,
 		counterAttackPower: 11,
 		portrait: "assets/images/darth-vader.jpg"
+	},
+
+	{
+		name: "Yoda",
+		hp: 200,
+		attackPower: 9,
+		counterAttackPower: 11,
+		portrait: "assets/images/yoda.jpg"
 	}
 ]
