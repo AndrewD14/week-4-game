@@ -41,5 +41,10 @@ characterControls.prototype = {
 			return true;
 		else
 			return false;
+	},
+
+	//gets the current hp of the character
+	getHp: function(){
+		return this.hp;
 	}
 };

@@ -40,14 +40,28 @@ function selectCharacter(){
 
 		charactersInPlay.push(newCharacter);
 
-		if(charactersInPlay.length == 1)
+		//adds the character to the Your Character section
+		if(charactersInPlay.length == 1){
 			$(this).css('background-color', "green");
+			var temp = $(this).detach();
+			$("#main-character").append(temp);
 
-		$(".char-btn").prop("disabled", false);
-	}
-	else{
-		$(".char-btn").prop("disabled", true);
-		alert("2 characters are already selected");
+			//disables the button from being clickable after selecting
+			$(this).prop("disabled", true);
+
+			//moves the remaining childs to the enemy section
+			$("#enemies").append($("#characters>button"));
+		}
+		//adds the enemies to the defender section
+		else {
+			$(this).css('background-color', "blue");
+			var temp = $(this).detach();
+			$("#defender").append(temp);
+
+			//disables the button from being clickable after selecting
+			$(this).prop("disabled", true);
+		}
+
 	}
 }
 
@@ -56,12 +70,18 @@ function attacking(){
 	//player attacking
 	var dead = charactersInPlay[1].takeDamage(charactersInPlay[0].attack());
 
+	//updates the defender's hp
+	$("#defender p:last").text(charactersInPlay[1].hp);
+
 	//check if npc is dead
 	if(dead){
 		alert("He is dead, tom!");
 	}
 	else {
 		dead = charactersInPlay[0].takeDamage(charactersInPlay[1].attack());
+
+		//updates the attackers's hp
+		$("#main-character p:last").text(charactersInPlay[0].hp);
 
 		//game over
 		if(dead){
