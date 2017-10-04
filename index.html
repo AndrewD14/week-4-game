@@ -34,10 +34,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3" id="characters"></div>
+				<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3" id="characters"></div>
 			</div>
 			<div class="row">
-				<div class="col-lg-12 col-md-12" id="enemies">
+				<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3" id="enemies">
 					<h3><span class="opacity-box">Enemies Available To Attack</span></h3>
 				</div>
 			</div>
@@ -62,17 +62,24 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4" id="defender">
-					<h3>Defender</h3>
+					<div class="row">
+						<h3 class="pull-right"><span class="opacity-box">Defender</span></h3>
+					</div>
 				</div>
 			</div>
-			<div class="col-lg-12 col-md-12" id="directions">
-				<p></p>
+			<div class="col-lg-12 col-md-12 opacity-box" id="directions">
+				<p>Directions: Pick a character first. Then select each character 1 at a time from the enemy list to attack. Keep clicking the ATTACK button to see how the combat goes.</p>
+				<p>You win if you defeat all the enemies. You lose if your hp reaches 0 before all the enemies die.</p>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(document).ready(loadCharacter());
 
-	<script type="text/javascript">
-		$(document).ready(loadCharacter());
-	</script>
+			//assigns the attack button to the element on the page
+			$("#attack").on("click", attacking);
 
+			//assigns the loadCharacter function to the button
+			$("#play-again").on("click", loadCharacter);
+		</script>
 	</body>
 </html>

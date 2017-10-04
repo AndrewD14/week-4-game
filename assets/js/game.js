@@ -3,6 +3,13 @@ var charactersInPlay = [];
 
 //function to populate the character buttons into html
 function loadCharacter(){
+	//clear the select area
+	$("#characters").empty();
+
+	//clear the enemies
+	$("#enemies button").remove();
+
+	//adds the characters to the select area
 	for(i in characterOptions){
 		var name = $("<p>");
 		name.text(characterOptions[i].name);
@@ -23,24 +30,20 @@ function loadCharacter(){
 		$("#characters").append(button);
 	}
 
-	//assigns the function to the buttons
-	$(".char-btn").on("click", selectCharacter);
-
-	//assigns the attack button to the element on the page
-	$("#attack").on("click", attacking);
-
 	//hides the play again button
 	$("#play-again").hide();
-
-	//assigns the loadCharacter function to the button
-	$("#play-again").on("click", loadCharacter);
 
 	//resets the elements on the page
 	$("#defender button").remove();
 	$("#main-character button").remove();
 	$("#combat-log").empty();
 
-	charactersInPlay = [];
+	//makes sure the character selected array is empyt
+	while(charactersInPlay.length)
+		charactersInPlay.pop();
+
+	//assigns the function to the buttons
+	$(".char-btn").on("click", selectCharacter);
 }
 
 //gets the selected character ready
@@ -71,6 +74,7 @@ function selectCharacter(){
 		else {
 			$(this).css('background-color', "red");
 			var temp = $(this).detach();
+			temp.addClass("pull-right");
 			$("#defender").append(temp);
 
 			//disables the button from being clickable after selecting
@@ -81,7 +85,6 @@ function selectCharacter(){
 
 //calls the logic to run through a round of attacking
 function attacking(){
-	
 	//checks to make sure we have all the characters selected first
 	if(charactersInPlay.length == 2){
 		//clears the log first

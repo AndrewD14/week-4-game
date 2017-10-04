@@ -44,3 +44,7 @@ h2 {
 #lose {
 	color: red;
 }
+
+#defender h3 {
+	padding-right: 10px;
+}
