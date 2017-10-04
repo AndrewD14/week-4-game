@@ -2,28 +2,27 @@ var characterOptions = [
 	{
 		name: "Luke Skywalker",
 		id: "luke",
-		hp: 0,
-		hpMultiplier: 0,
-		level: 0,
-		attackPower: 0,
-		attackPowerMultiplier: 0,
-		blockStr: 0,
-		blockStrMultiplier: 0,
-		expWorth: 0,
+		hp: 120,
+		attackPower: 7,
+		counterAttackPower: 12,
 		portrait: "assets/images/luke-skywalker.jpg"
 	},
 
 	{
 		name: "Darth Maul",
 		id: "maul",
-		hp: 0,
-		hpMultiplier: 0,
-		level: 0,
-		attackPower: 0,
-		attackPowerMultiplier: 0,
-		blockStr: 0,
-		blockStrMultiplier: 0,
-		expWorth: 0,
+		hp: 100,
+		attackPower: 10,
+		counterAttackPower: 10,
 		portrait: "assets/images/darth-maul.jpg"
+	},
+
+	{
+		name: "Darth Vader",
+		id: "vader",
+		hp: 200,
+		attackPower: 9,
+		counterAttackPower: 11,
+		portrait: "assets/images/darth-vader.jpg"
 	}
 ]
