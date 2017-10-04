@@ -2,7 +2,7 @@ var characterOptions = [
 	{
 		name: "Luke Skywalker",
 		hp: 200,
-		attackPower: 7,
+		attackPower: 5,
 		counterAttackPower: 40,
 		portrait: "assets/images/luke-skywalker.jpg",
 		portrait_alt: "picture of Luke Skywalker"
