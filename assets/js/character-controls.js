@@ -5,6 +5,7 @@ characterControls.prototype = {
 	attackPower: 0,
 	attackPowerMultiplier: 0,
 	counterAttackPower: 0,
+	name: "",
 
 	//loads the values in the object
 	populate: function(data){
@@ -12,6 +13,7 @@ characterControls.prototype = {
 		this.attackPower = data.attackPower;
 		this.attackPowerMultiplier = data.attackPower;
 		this.counterAttackPower = data.counterAttackPower;
+		this.name = data.name;
 	},
 
 	//runs the attack rules
