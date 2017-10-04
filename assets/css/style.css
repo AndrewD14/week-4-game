@@ -48,3 +48,7 @@ h2 {
 #defender h3 {
 	padding-right: 10px;
 }
+
+.underline {
+	text-decoration: underline;
+}
