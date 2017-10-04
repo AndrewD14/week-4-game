@@ -16,6 +16,7 @@ function loadCharacter(){
 
 		var image = $("<img>");
 		image.attr("src", characterOptions[i].portrait);
+		image.attr("alt", characterOptions[i].portrait_alt);
 
 		var hp = $("<p>");
 		hp.text(characterOptions[i].hp);

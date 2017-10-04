@@ -4,7 +4,8 @@ var characterOptions = [
 		hp: 200,
 		attackPower: 7,
 		counterAttackPower: 40,
-		portrait: "assets/images/luke-skywalker.jpg"
+		portrait: "assets/images/luke-skywalker.jpg",
+		portrait_alt: "picture of Luke Skywalker"
 	},
 
 	{
@@ -12,7 +13,8 @@ var characterOptions = [
 		hp: 100,
 		attackPower: 20,
 		counterAttackPower: 30,
-		portrait: "assets/images/darth-maul.jpg"
+		portrait: "assets/images/darth-maul.jpg",
+		portrait_alt: "picture of darth maul"
 	},
 
 	{
@@ -20,7 +22,8 @@ var characterOptions = [
 		hp: 180,
 		attackPower: 12,
 		counterAttackPower: 20,
-		portrait: "assets/images/darth-vader.jpg"
+		portrait: "assets/images/darth-vader.jpg",
+		portrait_alt: "picture of darth vader"
 	},
 
 	{
@@ -28,6 +31,7 @@ var characterOptions = [
 		hp: 170,
 		attackPower: 15,
 		counterAttackPower: 10,
-		portrait: "assets/images/yoda.jpg"
+		portrait: "assets/images/yoda.jpg",
+		portrait_alt: "picture of yoda"
 	}
 ]
