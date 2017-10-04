@@ -7,7 +7,7 @@ function loadCharacter(){
 	$("#characters").empty();
 
 	//clear the enemies
-	$("#enemies button").remove();
+	$("#enemies div").remove();
 
 	//adds the characters to the select area
 	for(i in characterOptions){
@@ -20,7 +20,7 @@ function loadCharacter(){
 		var hp = $("<p>");
 		hp.text(characterOptions[i].hp);
 
-		var button = $("<button>");
+		var button = $("<div>");
 		button.attr("charPick", i);
 		button.addClass("char-btn");
 		button.append(name);
@@ -34,8 +34,8 @@ function loadCharacter(){
 	$("#play-again").hide();
 
 	//resets the elements on the page
-	$("#defender button").remove();
-	$("#main-character button").remove();
+	$("#defender div").remove();
+	$("#main-character div").remove();
 	$("#combat-log").empty();
 
 	//makes sure the character selected array is empyt
@@ -68,7 +68,7 @@ function selectCharacter(){
 			$(this).prop("disabled", true);
 
 			//moves the remaining childs to the enemy section
-			$("#enemies").append($("#characters>button"));
+			$("#enemies").append($("#characters>div"));
 		}
 		//adds the enemies to the defender section
 		else {
@@ -102,12 +102,12 @@ function attacking(){
 		var dead = charactersInPlay[1].takeDamage(dmg);
 
 		//updates the defender's hp
-		$("#defender button p:last").html(charactersInPlay[1].hp);
+		$("#defender div p:last").html(charactersInPlay[1].hp);
 
 		//check if npc is dead
 		if(dead){
 			//removes from the html
-			$("#defender button").remove();
+			$("#defender div").remove();
 
 			//notifies the player kill the npc
 			log = $("<p>");
@@ -140,7 +140,7 @@ function attacking(){
 			dead = charactersInPlay[0].takeDamage(dmg);
 
 			//updates the attackers's hp
-			$("#main-character button p:last").html(charactersInPlay[0].hp);
+			$("#main-character div p:last").html(charactersInPlay[0].hp);
 
 			//game over
 			if(dead){
@@ -148,7 +148,7 @@ function attacking(){
 				charactersInPlay.pop(0);
 
 				//removes the main character from the page
-				$("#main-character button").remove();
+				$("#main-character div").remove();
 
 				//shows the play again button
 				$("#play-again").show();

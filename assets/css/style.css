@@ -13,6 +13,19 @@ button {
 	color: black;
 }
 
+.char-btn {
+	color: black;
+	height: 135px;
+	width: 154px;
+	padding: 5px;
+	text-align: center;
+	display: inline-block;
+	border: solid;
+	border-color: teal;
+	border-width: 2px;
+	background-color: white;
+}
+
 .char-btn p {
 	margin: 0;
 	color: black;
@@ -45,8 +58,8 @@ h2 {
 	color: red;
 }
 
-#defender h3 {
-	padding-right: 10px;
+#defender {
+	padding: 0;
 }
 
 .underline {
