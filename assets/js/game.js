@@ -60,7 +60,7 @@ function selectCharacter(){
 
 		//adds the character to the Your Character section
 		if(charactersInPlay.length == 1){
-			$(this).css('background-color', "green");
+			$(this).attr("id", "player-char");
 			var temp = $(this).detach();
 			$("#main-character").append(temp);
 
@@ -72,7 +72,7 @@ function selectCharacter(){
 		}
 		//adds the enemies to the defender section
 		else {
-			$(this).css('background-color', "red");
+			$(this).attr("id", "defender-char");
 			var temp = $(this).detach();
 			temp.addClass("pull-right");
 			$("#defender").append(temp);

@@ -65,3 +65,11 @@ h2 {
 .underline {
 	text-decoration: underline;
 }
+
+#player-char {
+	background-color: green;
+}
+
+#defender-char {
+	background-color: red;
+}
